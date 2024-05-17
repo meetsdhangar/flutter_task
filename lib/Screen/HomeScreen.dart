@@ -84,6 +84,11 @@ class HomeScreen extends StatelessWidget {
                     actions: [
                       TextButton(
                           onPressed: () {
+                            titlecontroller.text;
+                            descriptioncontroller.text;
+                            deadlinecontroller.text;
+                            durationcontroller.text;
+                            statuecontroller.text;
                             if (titlecontroller.text.isNotEmpty &&
                                 descriptioncontroller.text.isNotEmpty &&
                                 deadlinecontroller.text.isNotEmpty &&
@@ -277,57 +282,60 @@ class HomeScreen extends StatelessWidget {
                                                   task[index].status;
 
                                               return AlertDialog(
-                                                content: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  mainAxisSize:
-                                                      MainAxisSize.min,
-                                                  children: [
-                                                    Text("Title"),
-                                                    TextFormField(
-                                                      decoration:
-                                                          InputDecoration(
-                                                              hintText:
-                                                                  "Title"),
-                                                      controller:
-                                                          titlecontroller,
-                                                    ),
-                                                    Text("Description"),
-                                                    TextFormField(
-                                                      decoration:
-                                                          InputDecoration(
-                                                              hintText:
-                                                                  "Description"),
-                                                      controller:
-                                                          descriptioncontroller,
-                                                    ),
-                                                    Text('Deadline'),
-                                                    TextFormField(
-                                                      decoration:
-                                                          InputDecoration(
-                                                              hintText:
-                                                                  "Deadline"),
-                                                      controller:
-                                                          deadlinecontroller,
-                                                    ),
-                                                    Text('TaskDuration'),
-                                                    TextFormField(
-                                                      decoration: InputDecoration(
-                                                          hintText:
-                                                              "TaskDuration"),
-                                                      controller:
-                                                          durationcontroller,
-                                                    ),
-                                                    Text('Status'),
-                                                    TextFormField(
-                                                      decoration:
-                                                          InputDecoration(
-                                                              hintText:
-                                                                  "Status"),
-                                                      controller:
-                                                          statuecontroller,
-                                                    )
-                                                  ],
+                                                content: SingleChildScrollView(
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: [
+                                                      Text("Title"),
+                                                      TextFormField(
+                                                        decoration:
+                                                            InputDecoration(
+                                                                hintText:
+                                                                    "Title"),
+                                                        controller:
+                                                            titlecontroller,
+                                                      ),
+                                                      Text("Description"),
+                                                      TextFormField(
+                                                        decoration:
+                                                            InputDecoration(
+                                                                hintText:
+                                                                    "Description"),
+                                                        controller:
+                                                            descriptioncontroller,
+                                                      ),
+                                                      Text('Deadline'),
+                                                      TextFormField(
+                                                        decoration:
+                                                            InputDecoration(
+                                                                hintText:
+                                                                    "Deadline"),
+                                                        controller:
+                                                            deadlinecontroller,
+                                                      ),
+                                                      Text('TaskDuration'),
+                                                      TextFormField(
+                                                        decoration: InputDecoration(
+                                                            hintText:
+                                                                "TaskDuration"),
+                                                        controller:
+                                                            durationcontroller,
+                                                      ),
+                                                      Text('Status'),
+                                                      TextFormField(
+                                                        decoration:
+                                                            InputDecoration(
+                                                                hintText:
+                                                                    "Status"),
+                                                        controller:
+                                                            statuecontroller,
+                                                      )
+                                                    ],
+                                                  ),
                                                 ),
                                                 actions: [
                                                   TextButton(
@@ -356,6 +364,15 @@ class HomeScreen extends StatelessWidget {
                                                       child: Text('Edit')),
                                                   TextButton(
                                                       onPressed: () {
+                                                        titlecontroller.clear();
+                                                        descriptioncontroller
+                                                            .clear();
+                                                        deadlinecontroller
+                                                            .clear();
+                                                        durationcontroller
+                                                            .clear();
+                                                        statuecontroller
+                                                            .clear();
                                                         Navigator.pop(context);
                                                       },
                                                       child: Text('Cancel'))
