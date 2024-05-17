@@ -1,0 +1,60 @@
+### Flutter Developer Task
+
+#### Overview
+This task is designed to assess your skills in Flutter and Firebase, particularly focusing on authentication with Firebase Auth and data management with Firestore. The task involves creating a simple task management app with user authentication and CRUD operations on tasks.
+
+#### Requirements
+
+1. *User Authentication:*
+   - Implement email and password login and registration using Firebase Authentication.
+   - Include proper form validation for both login and registration forms.
+
+2. *Firestore Integration:*
+   - Allow users to create, read, update, and delete tasks in Firestore.
+   - Each task should have the following properties:
+     - *Title:* A short description of the task.
+     - *Description:* A detailed explanation of the task.
+     - *Deadline:* The date and time when the task is due.
+     - *Expected Task Duration:* Estimated time to complete the task.
+     - *Completion Status:* A button to mark the task as complete.
+
+3. *Additional Features:*
+   - Set an alarm/notification to alert the user 10 minutes before the task deadline.
+   - Properly handle form inputs, including validation and error handling.
+   - Ensure a responsive and user-friendly UI.
+
+#### Task Details
+
+1. *User Authentication:*
+   - Set up Firebase in your Flutter project.
+   - Implement screens for user login and registration.
+   - Use Firebase Authentication for user management.
+
+2. *Task Management:*
+   - Create a Firestore collection to store tasks.
+   - Implement CRUD (Create, Read, Update, Delete) operations for tasks.
+   - Ensure each task document in Firestore contains the required properties.
+
+3. *UI/UX:*
+   - Design a clean and intuitive user interface.
+   - Include a form for creating and updating tasks.
+   - Display a list of tasks with options to edit, delete, and mark as complete.
+   - Use appropriate widgets to handle different task properties (e.g., DateTime picker for deadlines).
+
+4. *Notifications:*
+   - Use Flutter's local notifications package to set up an alarm/notification that rings 10 minutes before the task deadline.
+   - Ensure the notification works even when the app is running in the background.
+
+#### Submission
+- Share APK file. This is a must.
+- Share the GitHub repository link containing the source code.
+- Include a README file with instructions on how to set up and run the project.
+
+#### Evaluation Criteria
+- Correctness: Does the app meet all the specified requirements?
+- Code Quality: Is the code clean, well-structured, and well-documented?
+- UI/UX: Is the app visually appealing and easy to use?
+- Functionality: Are all features working as expected, including notifications?
+- Firebase Integration: Is Firebase properly integrated and utilized for authentication and Firestore operations?
+
+Good luck, and we look forward to seeing your submission!
