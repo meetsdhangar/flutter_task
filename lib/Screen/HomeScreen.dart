@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
             appBar: AppBar(
-              leading: Icon(
+              leading: const Icon(
                 Icons.menu,
                 color: Colors.white,
               ),
@@ -60,23 +60,26 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         TextFormField(
-                          decoration: InputDecoration(hintText: "Title"),
+                          decoration: const InputDecoration(hintText: "Title"),
                           controller: titlecontroller,
                         ),
                         TextFormField(
-                          decoration: InputDecoration(hintText: "Description"),
+                          decoration:
+                              const InputDecoration(hintText: "Description"),
                           controller: descriptioncontroller,
                         ),
                         TextFormField(
-                          decoration: InputDecoration(hintText: "Deadline"),
+                          decoration:
+                              const InputDecoration(hintText: "Deadline"),
                           controller: deadlinecontroller,
                         ),
                         TextFormField(
-                          decoration: InputDecoration(hintText: "TaskDuration"),
+                          decoration:
+                              const InputDecoration(hintText: "TaskDuration"),
                           controller: durationcontroller,
                         ),
                         TextFormField(
-                          decoration: InputDecoration(hintText: "Status"),
+                          decoration: const InputDecoration(hintText: "Status"),
                           controller: statuecontroller,
                         )
                       ],
@@ -111,7 +114,7 @@ class HomeScreen extends StatelessWidget {
                             durationcontroller.clear();
                             statuecontroller.clear();
                           },
-                          child: Text('Add')),
+                          child: const Text('Add')),
                       TextButton(
                           onPressed: () {
                             Navigator.pop(context);
@@ -121,12 +124,12 @@ class HomeScreen extends StatelessWidget {
                             durationcontroller.clear();
                             statuecontroller.clear();
                           },
-                          child: Text('Cancel'))
+                          child: const Text('Cancel'))
                     ],
                   ),
                 );
               },
-              child: Icon(Icons.add),
+              child: const Icon(Icons.add),
             ),
             body: SingleChildScrollView(
               child: Column(
@@ -156,8 +159,10 @@ class HomeScreen extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
                                     color: index % 2 == 0
-                                        ? Color.fromARGB(255, 110, 178, 227)
-                                        : Color.fromARGB(255, 232, 225, 163),
+                                        ? const Color.fromARGB(
+                                            255, 110, 178, 227)
+                                        : const Color.fromARGB(
+                                            255, 232, 225, 163),
                                   ),
                                   width: 250.w,
                                   child: Padding(
@@ -248,7 +253,7 @@ class HomeScreen extends StatelessWidget {
                       return ListView.builder(
                         itemCount: task.length,
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         itemBuilder: (context, index) {
                           return Container(
                             width: double.infinity,
@@ -262,7 +267,7 @@ class HomeScreen extends StatelessWidget {
                                         mycontroller.deletetask(task[index]);
                                       },
                                       child: Icon(Icons.delete)),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                   InkWell(
@@ -290,10 +295,10 @@ class HomeScreen extends StatelessWidget {
                                                     mainAxisSize:
                                                         MainAxisSize.min,
                                                     children: [
-                                                      Text("Title"),
+                                                      const Text("Title"),
                                                       TextFormField(
                                                         decoration:
-                                                            InputDecoration(
+                                                            const InputDecoration(
                                                                 hintText:
                                                                     "Title"),
                                                         controller:
@@ -311,13 +316,14 @@ class HomeScreen extends StatelessWidget {
                                                       Text('Deadline'),
                                                       TextFormField(
                                                         decoration:
-                                                            InputDecoration(
+                                                            const InputDecoration(
                                                                 hintText:
                                                                     "Deadline"),
                                                         controller:
                                                             deadlinecontroller,
                                                       ),
-                                                      Text('TaskDuration'),
+                                                      const Text(
+                                                          'TaskDuration'),
                                                       TextFormField(
                                                         decoration: InputDecoration(
                                                             hintText:
